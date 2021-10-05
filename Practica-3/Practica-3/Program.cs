@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Practica_3
 {
@@ -39,30 +40,9 @@ namespace Practica_3
             calificaciones[9] = nueve;
             calificaciones[1] = uno;
 
-            //Sumar las notas
-            float suma = 0;
-
-            foreach (float nota in calificaciones)
-                suma += nota;
-            //Escribir los resultados
-            Console.WriteLine();
-            Console.WriteLine("El promedio es de " + suma / calificaciones.Count);
-
-            //valores maximos y minimos
-            int max = (int)calificaciones[0], min = (int)calificaciones[0];
-            for (int j = 0; j < ; j++)
-            {
-                if (calificaciones[j] >= max)
-
-                    max = (int)calificaciones[j];
-
-
-                else if (calificaciones[j] < min)
-
-                    min = (int)calificaciones[j];
-            }
-            Console.Write("\n\nLa mayor calificacion es: " + max);
-            Console.Write("\n\nLa minima calificacion es: " + min + "\n");
+            //promedio
+            var promedio = calificaciones.Average();
+            Console.WriteLine("\nEl promedio es de: " + promedio);
         }
     }
 }
