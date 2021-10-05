@@ -8,19 +8,8 @@ namespace Practica_3
     {
         static void Main(string[] args)
         {
-            List<float> calificaciones = new List<float>();
-
-            //entrada de datos
-            calificaciones.Add(5);
-            calificaciones.Add(5);
-            calificaciones.Add(10);
-            calificaciones.Add(8);
-            calificaciones.Add(3);
-            calificaciones.Add(4);
-            calificaciones.Add(2);
-            calificaciones.Add(1);
-            calificaciones.Add(20);
-            calificaciones.Add(1);
+            List<float> calificaciones = new List<float> {5,5,10,8,3,4,2,1,20,1};
+            
             //mostramos matriz original
             Console.WriteLine("****************** MATRIZ CALIFICACIONES ********************\n");
             for (int i = 0; i < calificaciones.Count; i++)
@@ -48,7 +37,12 @@ namespace Practica_3
             var minimo = calificaciones.Min();
 
             Console.WriteLine("La nota maxima es: " + maximo);
-            Console.WriteLine("La nota maxima es: " + minimo);
+            Console.WriteLine("La nota minima es: " + minimo);
+
+            var mode = calificaciones.GroupBy(n => n).
+                OrderByDescending(g => g.Count()).
+                Select(g => g.Key).FirstOrDefault();
+            Console.WriteLine(("La moda es: " + mode));
         }
     }
 }
