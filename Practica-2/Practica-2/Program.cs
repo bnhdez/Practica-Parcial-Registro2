@@ -8,24 +8,33 @@ namespace Practica_2
         {
             int nElmentos;
             Console.Write("Digite numero de elementos de la matriz:");
-            nElmentos = Convert.ToInt32(Console.ReadLine());
+            nElmentos = int.Parse(Console.ReadLine());
             int[] m = new int[nElmentos]; // crear la matriz 
-            int i = 0; //subindices 
 
             // llenar la matriz 
             Console.WriteLine("Introducir los valores de la matriz");
-            for (i = 0; i < nElmentos; i++)
+            for (int i = 0; i < nElmentos; i++)
             {
                 Console.Write("m[" + i + "]=");
-                m[i] = Convert.ToInt32(Console.ReadLine());
+                m[i] = int.Parse(Console.ReadLine());
             }
 
-            //ver elementos de una matriz 
-            Console.WriteLine();
-            for (i = 0; i < nElmentos; i++)
+            //valores maximos y minimos
+            int max = m[0], min = m[0];
+            for (int j = 0; j < m.Length; j++)
             {
-                Console.Write(m[i] + "");
+                    if (m[j] >= max)
+
+                    max = m[j];
+
+
+                else if (m[j] < min)
+
+                    min = m[j];
             }
+            Console.Write("\n\nEl tamaño de la matriz es: " + m.Length);
+            Console.Write("\n\nEl valor maximo es: " + max);
+            Console.Write("\n\nEl valor minimo es: " + min + "\n");
         }
     }
 }
