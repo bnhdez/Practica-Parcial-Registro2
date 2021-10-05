@@ -11,7 +11,7 @@ namespace Practica_3
             List<float> calificaciones = new List<float> {5,5,10,8,3,4,2,1,20,1};
             
             //mostramos matriz original
-            Console.WriteLine("****************** MATRIZ CALIFICACIONES ********************\n");
+            Console.WriteLine("****************** MATRIZ CALIFICACIONES ****************************\n");
             for (int i = 0; i < calificaciones.Count; i++)
             {
                 Console.Write(  calificaciones[i] + " ");
@@ -44,6 +44,15 @@ namespace Practica_3
                 OrderByDescending(g => g.Count()).
                 Select(g => g.Key).FirstOrDefault();
             Console.WriteLine(("La moda es: " + mode));
+
+            //Imprimimos nuevos resultados
+            Console.WriteLine();
+            Console.WriteLine("****************** NUEVA MATRIZ DE CALIFICACIONES ***************************\n");
+            for (int i = 0; i < calificaciones.Count; i++)
+            {
+                Console.Write(calificaciones[i] + " ");
+            }
+            Console.WriteLine();
         }
     }
 }
