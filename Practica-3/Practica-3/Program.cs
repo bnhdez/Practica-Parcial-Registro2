@@ -8,6 +8,7 @@ namespace Practica_3
     {
         static void Main(string[] args)
         {
+            //Para simplificar lineas de codigo usamos la coleccion Linq que nos ayudara con el promedio, valores minimos y maximos, y la moda
             List<float> calificaciones = new List<float> {5,5,10,8,3,4,2,1,20,1};
             
             //mostramos matriz original
