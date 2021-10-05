@@ -41,6 +41,7 @@ namespace Practica_3
 
             //Sumar las notas
             float suma = 0;
+
             foreach (float nota in calificaciones)
                 suma += nota;
             //Escribir los resultados
