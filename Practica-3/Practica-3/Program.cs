@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections;
+using System.Collections.Generic;
 
 namespace Practica_3
 {
@@ -7,7 +7,7 @@ namespace Practica_3
     {
         static void Main(string[] args)
         {
-            ArrayList calificaciones = new ArrayList();
+            List<float> calificaciones = new List<float>();
 
             //entrada de datos
             calificaciones.Add(5);
@@ -47,6 +47,22 @@ namespace Practica_3
             //Escribir los resultados
             Console.WriteLine();
             Console.WriteLine("El promedio es de " + suma / calificaciones.Count);
+
+            //valores maximos y minimos
+            int max = (int)calificaciones[0], min = (int)calificaciones[0];
+            for (int j = 0; j < ; j++)
+            {
+                if (calificaciones[j] >= max)
+
+                    max = (int)calificaciones[j];
+
+
+                else if (calificaciones[j] < min)
+
+                    min = (int)calificaciones[j];
+            }
+            Console.Write("\n\nLa mayor calificacion es: " + max);
+            Console.Write("\n\nLa minima calificacion es: " + min + "\n");
         }
     }
 }
