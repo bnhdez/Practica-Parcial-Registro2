@@ -33,12 +33,13 @@ namespace Practica_3
             var promedio = calificaciones.Average();
             Console.WriteLine("\nEl promedio es de: " + promedio);
 
+            //valores maximos y minimos
             var maximo = calificaciones.Max();
             var minimo = calificaciones.Min();
-
             Console.WriteLine("La nota maxima es: " + maximo);
             Console.WriteLine("La nota minima es: " + minimo);
 
+            //moda
             var mode = calificaciones.GroupBy(n => n).
                 OrderByDescending(g => g.Count()).
                 Select(g => g.Key).FirstOrDefault();
