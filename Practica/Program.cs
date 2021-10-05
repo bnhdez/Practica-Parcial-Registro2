@@ -8,29 +8,41 @@ public class Example
     public static void Main()
 
     {
+        //Metodo sin parametro ni tipo
+        Euro();
 
-        ArrayList estudiantes = new ArrayList();
+        //Metodo que devuelve un tipo
+        double l;
+        l = Libra_E();
+        Console.WriteLine("Equivale a $" + l);
 
-        estudiantes.Add("Juan");
+        //Metodo con parametro
+        double dinero;
+        Console.WriteLine("Ingrese la cantidad en yenes: "); dinero = double.Parse(Console.ReadLine());
+        Yen(dinero);
 
-        estudiantes.Add("Maria");
-
-        estudiantes.Add("Pdro");
-
-        estudiantes.Add("Luis");
-
-        estudiantes[2] = "Pedro";
-
-        for (int i = 0; i < estudiantes.Count; i ++)
-
+        static void Euro()
         {
-
-            Console.WriteLine("Estudiante {0} es \"{1}\"", i,
-
-                estudiantes[i]);
-
+            Console.WriteLine("Ingrese la cantidad en euros: "); double euros = double.Parse(Console.ReadLine());
+            double conversion;
+            conversion = euros * 1.16;
+            Console.WriteLine(euros + " euros equivalen a $" + conversion);
         }
 
+        static double Libra_E()
+        {
+            Console.WriteLine("Ingrese la cantidad en libras esterlinas: "); double esterlina = double.Parse(Console.ReadLine());
+            double conversion;
+            conversion = esterlina * 1.36;
+            return conversion;
+        }
+
+        static void Yen(double yen)
+        {
+            double conversion;
+            conversion = yen * 0.0090;
+            Console.WriteLine("");
+        }
     }
 
 }
